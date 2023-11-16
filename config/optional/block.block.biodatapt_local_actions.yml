@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - biodatapt
+id: biodatapt_local_actions
+theme: biodatapt
+region: content_above
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

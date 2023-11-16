@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Page user reset.
+ */
+#}
+
+{% include 'varbase_components:page-user-reset' with {
+  logged_in_without_blocks: [
+    'biodatapt_local_tasks',
+    'biodatapt_breadcrumbs',
+    'biodatapt_local_actions'
+  ],
+  not_logged_in_without_blocks: [
+    'biodatapt_local_tasks',
+    'biodatapt_breadcrumbs',
+    'biodatapt_local_actions',
+    'biodatapt_page_title'
+  ]
+} %}

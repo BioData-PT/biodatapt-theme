@@ -1,0 +1,13 @@
+@import "../defaults";   // Global defaults.
+
+// BioData.pt Base RTL Global styling.
+// -----------------------------------------------------------------------------
+
+/* Justify content center. */
+[dir="rtl"] {
+  .justify-content-center {
+    &.nav-pills > li + li {
+      margin-left: inherit;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+framework:
+  dependencies:
+    - biodatapt/bootstrap-styles
+    - biodatapt/bootstrap-scripts
+    - biodatapt/global-styles
+    - biodatapt/global-scripts
+    - biodatapt/fontawesome
+bootstrap-styles:
+  css:
+    base:
+      css/base/bootstrap.base.css: {  }
+bootstrap-scripts:
+  dependencies:
+    - core/drupal
+    - core/jquery
+  js:
+    js/popperjs/popper.js: {  }
+    js/bootstrap/bootstrap.min.js: {  }
+global-styles:
+  css:
+    base:
+      css/base/biodatapt.base.css: {  }
+    layout:
+      css/layout/edge2edge.layout.css: {  }
+      css/layout/equal-height.layout.css: {  }
+      css/layout/print.layout.css:
+        media: print
+global-scripts:
+  js:
+    js/scripts.js: {  }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.ajax
+framework-rtl:
+  dependencies:
+    - biodatapt/bootstrap-styles-rtl
+    - biodatapt/bootstrap-scripts
+    - biodatapt/global-styles-rtl
+    - biodatapt/global-scripts
+    - biodatapt/fontawesome
+bootstrap-styles-rtl:
+  css:
+    base:
+      css/base/bootstrap-rtl.base.css: {  }
+global-styles-rtl:
+  css:
+    base:
+      css/base/biodatapt-rtl.base.css: {  }
+    theme:
+      fonts/droid/arabic/kufi/css/droidarabickufi.css: {  }
+content_moderation:
+  css:
+    theme:
+      css/theme/content-moderation.theme.css: {  }
+fontawesome:
+  css:
+    theme:
+      fonts/fontawesome-free/css/all.min.css:
+        minified: true

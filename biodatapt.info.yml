@@ -1,0 +1,36 @@
+name: BioData.pt
+description: 'BioData.pt theme generated from BioData.pt'
+core_version_requirement: ^10
+engine: twig
+type: theme
+'base theme': false
+screenshot: screenshot.png
+'alt text': 'Screenshot of BioData.pt, Varbase front-end theme.'
+regions:
+  top_bar: 'Top bar'
+  navbar_branding: 'Navbar branding'
+  navigation: 'Navigation (Desktop and Collapse)'
+  highlighted: Highlighted
+  content_above: 'Content above'
+  primary_sidebar: 'Primary sidebar'
+  content: Content
+  secondary_sidebar: 'Secondary sidebar'
+  content_below: 'Content below'
+  footer_top: 'Footer top'
+  footer_bottom: 'Footer bottom'
+libraries:
+  - biodatapt/framework
+libraries-override:
+  content_moderation/content_moderation: biodatapt/content_moderation
+ckeditor_stylesheets:
+  - css/base/bootstrap.base.css
+  - css/base/biodatapt.base.css
+  - css/layout/edge2edge.layout.css
+  - css/layout/equal-height.layout.css
+  - css/layout/print.layout.css
+ckeditor5-stylesheets: false
+enforce_prop_schemas: false
+version: 1.0.0
+project: biodatapt
+datestamp: 1695931082
+generator: 'biodatapt:3.0.0-beta4'
