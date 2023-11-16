@@ -15,3 +15,7 @@ $aspect-ratios: (
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%),
 );
+
+$theme-colors: (
+  "primary": #f47d20,
+);
