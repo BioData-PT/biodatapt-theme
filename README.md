@@ -1,6 +1,6 @@
 # BioData.pt Theme for Drupal
 
-Maintainer: [Gil Poiares-Oliveira](gpo@biodata.pt) (INESC-ID/BioData.pt)
+Maintainer: [Gil Poiares-Oliveira](mailto:gpo@biodata.pt) (INESC-ID/BioData.pt)
 
 All BioData.pt logos and imagery are © Associação BIP4DAB - all rights reserved.
 
