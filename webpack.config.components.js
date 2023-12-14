@@ -20,7 +20,7 @@ module.exports = {
     // 'molecules/field-tags/field-tags': ['./components/molecules/field-tags/field-tags.scss'],
     // 'organisms/navbar/navbar': ['./components/organisms/navbar/navbar.scss']
     // 'organisms/page-header/page-header': ['./components/organisms/page-header/page-header.scss'],
-    // 'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
+    'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
     // 'organisms/page-better-login/page-better-login': ['./components/organisms/page-better-login/page-better-login.scss'],
     // 'organisms/social-auth/social-auth': ['./components/organisms/social-auth/social-auth.scss'],
     // 'organisms/card-featured/card-featured': ['./components/organisms/card-featured/card-featured.scss'],
