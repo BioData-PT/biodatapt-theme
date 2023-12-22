@@ -1,6 +1,6 @@
 name: BioData.pt
 description: BioData.pt theme generated from BioData.pt
-core_version_requirement: ~10.1.0
+core_version_requirement: ~10.2.0
 engine: twig
 type: theme
 'base theme': false
