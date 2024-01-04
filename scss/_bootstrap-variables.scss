@@ -5,6 +5,8 @@
 // https://getbootstrap.com/docs/5.3/customize/sass
 // https://github.com/twbs/bootstrap/blob/v5.3.1/scss/_variables.scss
 
+@use "sass:map";
+
 // Override aspect ratios array to add more ratios.
 $aspect-ratios: (
   "1x1": 100%,
@@ -20,3 +22,5 @@ $theme-colors: (
   "primary": #F37021,
   "secondary": #4D4D4D,
 );
+
+$component-active-bg: map.get($theme-colors, "primary");
