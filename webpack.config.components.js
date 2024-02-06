@@ -18,9 +18,10 @@ module.exports = {
     // 'molecules/alert/alert': ['./components/molecules/alert/alert.scss'],
     // 'molecules/tabs/tabs': ['./components/molecules/tabs/tabs.scss'],
     // 'molecules/field-tags/field-tags': ['./components/molecules/field-tags/field-tags.scss'],
-    // 'organisms/navbar/navbar': ['./components/organisms/navbar/navbar.scss']
+    //'organisms/navbar/navbar': ['./components/organisms/navbar/navbar.scss'],
     // 'organisms/page-header/page-header': ['./components/organisms/page-header/page-header.scss'],
-    'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
+    //'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
+    'organisms/nav/nav': ['./components/organisms/nav/nav.scss'],
     // 'organisms/page-better-login/page-better-login': ['./components/organisms/page-better-login/page-better-login.scss'],
     // 'organisms/social-auth/social-auth': ['./components/organisms/social-auth/social-auth.scss'],
     // 'organisms/card-featured/card-featured': ['./components/organisms/card-featured/card-featured.scss'],

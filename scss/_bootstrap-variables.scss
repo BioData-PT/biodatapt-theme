@@ -43,4 +43,5 @@ $theme-colors: (
   "secondary": #4D4D4D,
 );
 
+$nav-underline-link-active-color: map.get($theme-colors, "primary");
 $component-active-bg: map.get($theme-colors, "primary");
