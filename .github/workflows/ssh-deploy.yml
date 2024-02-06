@@ -1,0 +1,19 @@
+name: Deploy to web server
+on: [push]
+
+jobs:
+    deploy:
+        name: deploy
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Copy files to server
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                host: ${{ secrets.HOST }}
+                username: ${{ secrets.USERNAME }}
+                port: ${{ secrets.PORT }}
+                source: "."
+                target: ${{ secrets.TARGET }}
+                key: ${{ secrets.PRIVATE_KEY }}
+                rm: true
