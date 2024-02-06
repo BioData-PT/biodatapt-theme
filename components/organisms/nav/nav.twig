@@ -55,16 +55,16 @@
         {% elseif item.url.options.attributes.class %}
           {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
         {% endif %}
-        <li style="font-family: 'Roboto Slab'" class="{{ nav_item_classes|join(' ') }}">
+        <li class="{{ nav_item_classes|join(' ') }}">
           {% if item.is_expanded and item.below %}
-            <a href="{{ item.url }}" class="{{ nav_link_classes|merge(['dropdown-toggle'])|join(' ') }}" data-bs-toggle="dropdown">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="{{ nav_link_classes|join(' ') }}" data-bs-toggle="dropdown"  style="font-family: 'Roboto Slab'">{{ item.title }}</a>
             {% if item.below %}
               {% include 'varbase_components:dropdown-menu' with {
                 items: item.below
               } %}
             {% endif %}
           {% else %}
-            {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
+            {{ link(item.title, item.url, { 'class': nav_link_classes, 'style': 'font-family: \'Roboto Slab\''}) }}
           {% endif %}
         </li>
       {% endfor %}
