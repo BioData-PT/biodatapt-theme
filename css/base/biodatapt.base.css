@@ -72,5 +72,11 @@ body.user-logged-in .btn .hidden-anonymous {
   display: inline-block !important;
 }
 
+h1 {
+  font-family: "Roboto Slab", sans-serif;
+  text-transform: uppercase;
+  color: #f37021;
+}
+
 
 /*# sourceMappingURL=biodatapt.base.css.map*/
