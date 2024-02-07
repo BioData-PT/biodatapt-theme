@@ -21,7 +21,6 @@ module.exports = {
     //'organisms/navbar/navbar': ['./components/organisms/navbar/navbar.scss'],
     // 'organisms/page-header/page-header': ['./components/organisms/page-header/page-header.scss'],
     //'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
-    'organisms/nav/nav': ['./components/organisms/nav/nav.scss'],
     // 'organisms/page-better-login/page-better-login': ['./components/organisms/page-better-login/page-better-login.scss'],
     // 'organisms/social-auth/social-auth': ['./components/organisms/social-auth/social-auth.scss'],
     // 'organisms/card-featured/card-featured': ['./components/organisms/card-featured/card-featured.scss'],
@@ -30,6 +29,7 @@ module.exports = {
     // 'organisms/card-hero/card-hero': ['./components/organisms/card-hero/card-hero.scss'],
     // 'organisms/card-text/card-text': ['./components/organisms/card-text/card-text.scss'],
     // 'pages/page/page': ['./components/pages/page/page.scss']
+    'organisms/media-hero-slide/media-hero-slide': ['./components/organisms/media-hero-slide/media-hero-slide.scss']
   },
   output: {
     path: path.resolve(__dirname, 'components'),
