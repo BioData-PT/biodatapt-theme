@@ -72,10 +72,18 @@ body.user-logged-in .btn .hidden-anonymous {
   display: inline-block !important;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", sans-serif;
+}
+
+h1 {
   text-transform: uppercase;
   color: #f37021;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #662b14;
 }
 
 
