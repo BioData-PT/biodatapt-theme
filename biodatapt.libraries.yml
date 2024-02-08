@@ -24,7 +24,10 @@ global-styles:
       css/layout/edge2edge.layout.css: {  }
       css/layout/equal-height.layout.css: {  }
       css/layout/print.layout.css:
-        media: print
+    theme:
+      fonts/inter/css/inter.css
+      fonts/raleway/css/raleway.css
+      fonts/roboto-slab/css/roboto-slab.css
 global-scripts:
   js:
     js/scripts.js: {  }
