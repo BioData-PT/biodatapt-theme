@@ -4,7 +4,6 @@ framework:
     - biodatapt/bootstrap-scripts
     - biodatapt/global-styles
     - biodatapt/global-scripts
-    - biodatapt/fontawesome
 bootstrap-styles:
   css:
     base:
@@ -41,7 +40,6 @@ framework-rtl:
     - biodatapt/bootstrap-scripts
     - biodatapt/global-styles-rtl
     - biodatapt/global-scripts
-    - biodatapt/fontawesome
 bootstrap-styles-rtl:
   css:
     base:
@@ -56,8 +54,3 @@ content_moderation:
   css:
     theme:
       css/theme/content-moderation.theme.css: {  }
-fontawesome:
-  css:
-    theme:
-      fonts/fontawesome-free/css/all.min.css:
-        minified: true

@@ -9,8 +9,3 @@ Add the font-face definition files to the biodatapt/global-styles
 Other ways could be used to attach or add fonts in your sites.
 This way is to have a better performance and code coverage.
 
-* Issue [#3212956](https://www.drupal.org/i/3212956): 
-        Fixed BioData.pt performance code coverage for preloaded RTL fonts
-* Issue [#3209970](https://www.drupal.org/i/3209970):
-        Fixed BioData.pt performance code coverage for preloaded remote CDN 
-        Font Awesome library to a packaged one for better pre-loading of icons
