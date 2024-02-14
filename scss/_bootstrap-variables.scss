@@ -38,10 +38,10 @@ $btn-border-radius-lg: 0;
 // Override the color and decoration of links.
 $link-hover-decoration: none;
 $link-hover-color: #4D4D4D;
-$theme-colors: (
-  "primary": #F37021,
-  "secondary": #4D4D4D,
-);
+$link-color: #4C4C4C;
+$primary; #F35C19;
+$secondary: #444041;
+$orange: #F35C19;
 
 $nav-underline-link-active-color: map.get($theme-colors, "primary");
 $component-active-bg: map.get($theme-colors, "primary");
