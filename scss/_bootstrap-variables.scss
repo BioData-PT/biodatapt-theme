@@ -38,9 +38,12 @@ $btn-border-radius-lg: 0;
 $link-hover-decoration: none;
 $link-hover-color: #4D4D4D;
 $link-color: #4C4C4C;
-$primary; #F35C19;
-$secondary: #444041;
 $orange: #F35C19;
+
+$theme-colors: (
+  "primary": #F35C19,
+  "secondary": #444041
+);
 
 $nav-underline-link-active-color: map.get($theme-colors, "primary");
 $component-active-bg: map.get($theme-colors, "primary");
