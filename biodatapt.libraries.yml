@@ -27,6 +27,7 @@ global-styles:
       fonts/inter/css/inter.css: {}
       fonts/raleway/css/raleway.css: {}
       fonts/roboto-slab/css/roboto-slab.css: {}
+      fonts/lato/css/lato.css: {}
 global-scripts:
   js:
     js/scripts.js: {  }

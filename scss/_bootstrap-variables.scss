@@ -21,8 +21,7 @@ $aspect-ratios: (
   "21x9": calc(9 / 21 * 100%),
 );
 
-// Override the default primary font family to Inter - Regular, Italic Bold for sans serif.
-$font-family-sans-serif: Inter, sans-serif;
+$font-family-sans-serif: "Lato", sans-serif;
 $indigo: #6610f2;
 $indigo-600: shade-color($indigo, 20%);
 $border-radius: .125rem;
