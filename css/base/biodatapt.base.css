@@ -87,3 +87,12 @@ h3 {
   font-size: 1.17em;
 }
 
+.feed-icon {
+  display: block;
+  overflow: hidden;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+  background: url(../../images/square-rss.svg) no-repeat;
+}
+
