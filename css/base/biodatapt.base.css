@@ -97,6 +97,6 @@ h3 {
 }
 
 #page > nav {
-  z-index: auto;
+  z-index: 500;
 }
 
