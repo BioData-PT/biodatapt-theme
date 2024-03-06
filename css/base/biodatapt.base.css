@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -98,5 +100,18 @@ h3 {
 
 #page > nav {
   z-index: 500;
+}
+
+.job-posting .field__label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.field--name-schema-responsibilities .field__item::before {
+  content: "• ";
+}
+
+.field--name-schema-skills .field__item::before {
+  content: "• ";
 }
 
