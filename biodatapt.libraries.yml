@@ -24,7 +24,6 @@ global-styles:
       css/layout/equal-height.layout.css: {  }
       css/layout/print.layout.css:
     theme:
-      fonts/inter/css/inter.css: {}
       fonts/raleway/css/raleway.css: {}
       fonts/roboto-slab/css/roboto-slab.css: {}
       fonts/lato/css/lato.css: {}

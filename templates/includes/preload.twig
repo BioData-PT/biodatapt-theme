@@ -12,7 +12,7 @@
 {#
 * NOTE: Change the logic in this file to match the need of your website.
 
-* Example of logic: 
+* Example of logic:
     - Multilingual websites may use a language selection for preloaded assets.
     - Sections of the website may have a custom prelead assets for CSS/JS.
 *  --------------------------------------------------------------------------
@@ -36,11 +36,6 @@
 
 {# Preload assets only for LTR languages. #}
 {% if html_dir == 'ltr' %}
-  {# Preload Font Inter #}
-  <link rel="preload" href="{{ biodatapt_path }}/fonts/inter/webfonts/inter.eot" as="font" type="font/eot" crossorigin="anonymous">
-  <link rel="preload" href="{{ biodatapt_path }}/fonts/inter/webfonts/inter.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-  <link rel="preload" href="{{ biodatapt_path }}/fonts/inter/webfonts/inter.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="{{ biodatapt_path }}/fonts/inter/webfonts/inter.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   {# Preload Font Roboto Slab #}
   <link rel="preload" href="{{ biodatapt_path }}/fonts/roboto-slab/fonts/roboto-slab-v34-latin_latin-ext-100.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="{{ biodatapt_path }}/fonts/roboto-slab/fonts/roboto-slab-v34-latin_latin-ext-200.woff2" as="font" type="font/woff2" crossorigin="anonymous">
