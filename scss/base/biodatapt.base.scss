@@ -130,3 +130,15 @@ h3 {
 .field--name-schema-skills .field__item::before {
     content: "• ";
 }
+
+// Logo size fix
+
+.navbar-brand img {
+    height: 55px;
+}
+
+@media (min-width: 1200px) {
+    .navbar-brand img {
+        height: 90px;
+    }
+}

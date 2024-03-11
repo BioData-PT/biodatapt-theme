@@ -115,3 +115,13 @@ h3 {
   content: "• ";
 }
 
+.navbar-brand img {
+  height: 55px;
+}
+
+@media (min-width: 1200px) {
+  .navbar-brand img {
+    height: 90px;
+  }
+}
+
