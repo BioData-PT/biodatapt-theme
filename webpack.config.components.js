@@ -1,12 +1,12 @@
 const path = require('path');
-const isDev = (process.env.NODE_ENV !== 'production');
+const isDev = process.env.NODE_ENV !== 'production';
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const postcssRTLCSS = require('postcss-rtlcss');
 const { Mode } = require('postcss-rtlcss/options');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -29,7 +29,9 @@ module.exports = {
     // 'organisms/card-hero/card-hero': ['./components/organisms/card-hero/card-hero.scss'],
     // 'organisms/card-text/card-text': ['./components/organisms/card-text/card-text.scss'],
     // 'pages/page/page': ['./components/pages/page/page.scss']
-    'organisms/media-hero-slide/media-hero-slide': ['./components/organisms/media-hero-slide/media-hero-slide.scss']
+    'organisms/media-hero-slide/media-hero-slide': [
+      './components/organisms/media-hero-slide/media-hero-slide.scss',
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'components'),
@@ -40,9 +42,9 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        exclude: /sprite\.svg$/,
-        type: 'javascript/auto',
-        use: [{
+        type: 'asset/resource',
+        use: [
+          {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]', //?[contenthash]
@@ -67,20 +69,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
         test: /\.(css|scss)$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
               name: '[name].[ext]?[hash]',
-            }
+            },
           },
           {
             loader: 'css-loader',
@@ -108,15 +103,18 @@ module.exports = {
                     mode: Mode.override, // Use 'combined' mode for RTL flipping
                     ignorePrefixedRules: true,
                   }),
-                  ['postcss-perfectionist', {
-                    format: 'expanded',
-                    indentSize: 2,
-                    trimLeadingZero: true,
-                    zeroLengthNoUnit: false,
-                    maxAtRuleLength: false,
-                    maxSelectorLength: false,
-                    maxValueLength: false,
-                  }]
+                  [
+                    'postcss-perfectionist',
+                    {
+                      format: 'expanded',
+                      indentSize: 2,
+                      trimLeadingZero: true,
+                      zeroLengthNoUnit: false,
+                      maxAtRuleLength: false,
+                      maxSelectorLength: false,
+                      maxValueLength: false,
+                    },
+                  ],
                 ],
               },
             },
@@ -127,58 +125,46 @@ module.exports = {
               sourceMap: isDev,
               // Global SCSS imports:
               additionalData: `
-                @use "sass:color";
-                @use "sass:math";
-              `,
+                 @use "sass:color";
+                 @use "sass:math";
+               `,
             },
           },
         ],
       },
-      {
-        test: /\.(woff(2))(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'javascript/auto',
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]?[hash]',
-            publicPath: (url, resourcePath, context) => {
-              const relativePath = path.relative(context, resourcePath);
-
-              // Settings
-              if (resourcePath.includes('media/font')) {
-                return `../../${relativePath}`;
-              }
-
-              return `../${relativePath}`;
-            },
-          }
-        }],
-      },
+    ],
+    noParse: [
+      path.resolve(__dirname, 'components/atoms/accordion/accordion.js'),
     ],
   },
   resolve: {
-    modules: [
-      path.join(__dirname, 'node_modules'),
-    ],
+    modules: [path.join(__dirname, 'node_modules')],
     extensions: ['.js', '.json'],
   },
   plugins: [
     new CopyPlugin({
-      patterns: [
-        { from: "./components", to: "./" }
-      ],
+      patterns: [{ from: './components', to: './' }],
       options: {
         concurrency: 100,
       },
     }),
     new RemoveEmptyScriptsPlugin(),
     new CleanWebpackPlugin({
-      cleanStaleWebpackAssets: false
+      cleanStaleWebpackAssets: false,
     }),
     new MiniCssExtractPlugin(),
   ],
   watchOptions: {
     aggregateTimeout: 300,
-    ignored: ['**/*.woff', '**/*.json', '**/*.woff2', '**/*.jpg', '**/*.png', '**/*.svg', 'node_modules'],
-  }
+    ignored: [
+      'components/**/**/*.js',
+      '**/*.woff',
+      '**/*.json',
+      '**/*.woff2',
+      '**/*.jpg',
+      '**/*.png',
+      '**/*.svg',
+      'node_modules',
+    ],
+  },
 };

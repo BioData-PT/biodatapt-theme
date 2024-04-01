@@ -4,53 +4,198 @@ framework:
     - biodatapt/bootstrap-scripts
     - biodatapt/global-styles
     - biodatapt/global-scripts
+    - biodatapt/bootstrap-icons
 bootstrap-styles:
   css:
     base:
-      css/base/bootstrap.base.css: {  }
+      css/base/bootstrap.base.css: {}
 bootstrap-scripts:
   dependencies:
-    - core/drupal
-    - core/jquery
+    - varbase_components/bs-base-component-script
+    # - varbase_components/bs-alert-script
+    # - varbase_components/bs-button-script
+    # - varbase_components/bs-carousel-script
+    # - varbase_components/bs-collapse-script
+    # - varbase_components/bs-dropdown-script
+    - varbase_components/bs-modal-script
+    - varbase_components/bs-offcanvas-script
+    - varbase_components/bs-popover-script
+    - varbase_components/bs-scrollspy-script
+    - varbase_components/bs-tab-script
+    - varbase_components/bs-toast-script
+    - varbase_components/bs-tooltip-script
+    - content_moderation/content_moderation
+
+# Popperjs core.
+popper-script:
   js:
-    js/popperjs/popper.js: {  }
-    js/bootstrap/bootstrap.min.js: {  }
+    js/popperjs/popper.js: {}
+
+# Bootstrap base component script.
+bs-base-component-script:
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/drupal.ajax
+    - core/jquery
+    - core/once
+    - varbase_components/popper-script
+  js:
+    js/bootstrap/util/index.js: {}
+    js/bootstrap/dom/data.js: {}
+    js/bootstrap/dom/event-handler.js: {}
+    js/bootstrap/dom/manipulator.js: {}
+    js/bootstrap/dom/selector-engine.js: {}
+    js/bootstrap/util/config.js: {}
+    js/bootstrap/util/component-functions.js: {}
+    js/bootstrap/util/backdrop.js: {}
+    js/bootstrap/util/focustrap.js: {}
+    js/bootstrap/util/scrollbar.js: {}
+    js/bootstrap/util/swipe.js: {}
+    js/bootstrap/util/sanitizer.js: {}
+    js/bootstrap/util/template-factory.js: {}
+    js/bootstrap/base-component.js: {}
+
+# Bootstrap alert script.
+bs-alert-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/alert.js: {}
+
+# Bootstrap button script.
+bs-button-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/button.js: {}
+
+# Bootstrap carousel script.
+bs-carousel-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/carousel.js: {}
+
+# Bootstrap collapse script.
+bs-collapse-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/collapse.js: {}
+
+# Bootstrap dropdown script.
+bs-dropdown-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/dropdown.js: {}
+
+# Bootstrap modal script.
+bs-modal-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/modal.js: {}
+
+# Bootstrap offcanvas script.
+bs-offcanvas-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/offcanvas.js: {}
+
+# Bootstrap popover script.
+bs-popover-script:
+  dependencies:
+    - varbase_components/bs-tooltip-script
+  js:
+    js/bootstrap/popover.js: {}
+
+# Bootstrap scrollspy script.
+bs-scrollspy-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/scrollspy.js: {}
+
+# Bootstrap tab script.
+bs-tab-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/tab.js: {}
+
+# Bootstrap toast script.
+bs-toast-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/toast.js: {}
+
+# Bootstrap tooltip script.
+bs-tooltip-script:
+  dependencies:
+    - varbase_components/bs-base-component-script
+  js:
+    js/bootstrap/tooltip.js: {}
+
+# BioData.pt Theme global styles library.
 global-styles:
   css:
     base:
-      css/base/biodatapt.base.css: {  }
+      css/base/biodatapt.base.css: {}
     layout:
-      css/layout/edge2edge.layout.css: {  }
-      css/layout/equal-height.layout.css: {  }
-      css/layout/print.layout.css:
+      css/layout/edge2edge.layout.css: {}
+      css/layout/equal-height.layout.css: {}
+      css/layout/print.layout.css: { media: print }
     theme:
       fonts/raleway/css/raleway.css: {}
       fonts/roboto-slab/css/roboto-slab.css: {}
       fonts/lato/css/lato.css: {}
+
+# BioData.pt Theme global scripts library.
 global-scripts:
   js:
-    js/scripts.js: {  }
+    js/scripts.js: {}
   dependencies:
-    - core/jquery
+    - core/drupalSettings
     - core/drupal
     - core/drupal.ajax
+    - core/jquery
+    - core/once
+
 framework-rtl:
   dependencies:
     - biodatapt/bootstrap-styles-rtl
     - biodatapt/bootstrap-scripts
     - biodatapt/global-styles-rtl
     - biodatapt/global-scripts
+    - biodatapt/bootstrap-icons
+    - biodatapt/fontawesome
+
+# Bootstrap 5 global RTL styles library.
 bootstrap-styles-rtl:
   css:
     base:
-      css/base/bootstrap-rtl.base.css: {  }
+      css/base/bootstrap-rtl.base.css: {}
+
+# BioData.pt Theme global RTL styles library.
 global-styles-rtl:
   css:
     base:
-      css/base/biodatapt-rtl.base.css: {  }
+      css/base/biodatapt-rtl.base.css: {}
     theme:
-      fonts/droid/arabic/kufi/css/droidarabickufi.css: {  }
+      fonts/droid/arabic/kufi/css/droidarabickufi.css: {}
+
+# BioData.pt Theme content moderation status theme.
 content_moderation:
   css:
     theme:
-      css/theme/content-moderation.theme.css: {  }
+      css/theme/content-moderation.theme.css: {}
+
+# Bootstrap free icons.
+bootstrap-icons:
+  css:
+    theme:
+      fonts/bootstrap-icons/font/bootstrap-icons.min.css: { minified: true }

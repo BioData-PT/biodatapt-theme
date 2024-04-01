@@ -4,46 +4,84 @@
 // https://getbootstrap.com/docs/5.3/customize/sass
 // https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss
 
-@use "sass:map";
-@import "../node_modules/bootstrap/scss/functions";      // Bootstrap functions.
-@import "../node_modules/bootstrap/scss/mixins";         // Bootstrap mixins.
+@use 'sass:map';
+@import '../node_modules/bootstrap/scss/functions'; // Bootstrap functions.
+@import '../node_modules/bootstrap/scss/mixins'; // Bootstrap mixins.
 
 $prefix: bs-;
 
 // Override aspect ratios array to add more ratios.
 $aspect-ratios: (
-  "1x1": 100%,
-  "2x1": calc(1 / 2 * 100%),
-  "3x1": calc(1 / 3 * 100%),
-  "4x1": calc(1 / 4 * 100%),
-  "4x3": calc(3 / 4 * 100%),
-  "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%),
+  '1x1': 100%,
+  '2x1': calc(1 / 2 * 100%),
+  '3x1': calc(1 / 3 * 100%),
+  '4x1': calc(1 / 4 * 100%),
+  '4x3': calc(3 / 4 * 100%),
+  '16x9': calc(9 / 16 * 100%),
+  '21x9': calc(9 / 21 * 100%)
 );
 
-$font-family-sans-serif: "Lato", sans-serif;
+$font-family-sans-serif: 'Lato', sans-serif;
+
+// Override the default font size.
+$font-size-root: null;
+$font-size-base: 1.125rem; // Assumes the browser default, typically `16px`
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.125rem;
+
+// Override the default quote font size.
+$blockquote-font-size: 1rem;
+
+// Override the default headings font sizes.
+$h1-font-size: 3.25rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 1.875rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Override the default headings.
+$headings-font-style: normal;
+$headings-font-weight: 700;
+$headings-line-height: 140%;
+
+// Override the default display headings.
+$display-font-weight: 500;
+
+// Override the default lead styling.
+$lead-font-weight: 500;
+
+// Override the secondary color to use indigo-600.
 $indigo: #6610f2;
 $indigo-600: shade-color($indigo, 20%);
-$border-radius: .125rem;
-$border-radius-sm: .125rem;
-$border-radius-lg: .125rem;
+
 // Override border radius for all breakpoints.
+$border-radius: 0.125rem;
+$border-radius-sm: 0.125rem;
+$border-radius-lg: 0.125rem;
+
 // Override border radius for Cards with no radius.
 $card-border-radius: 0;
+
 // Override border radius for buttons with no radius.
 $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;
+
 // Override the color and decoration of links.
+$link-hover-color: #084298;
 $link-hover-decoration: none;
-$link-hover-color: #4D4D4D;
-$link-color: #4C4C4C;
-$orange: #F35C19;
+
+// Override the default Breadcrumbs.
+$breadcrumb-font-size: 1rem;
+$breadcrumb-padding-x: 0.0625rem;
+$breadcrumb-divider: quote('\F285');
+$breadcrumb-divider-flipped: quote('\F284');
 
 $theme-colors: (
-  "primary": #F35C19,
-  "secondary": #444041
+  'primary': #f35c19,
+  'secondary': #444041
 );
 
-$nav-underline-link-active-color: map.get($theme-colors, "primary");
-$component-active-bg: map.get($theme-colors, "primary");
+$nav-underline-link-active-color: map.get($theme-colors, 'primary');
+$component-active-bg: map.get($theme-colors, 'primary');

@@ -1,4 +1,4 @@
-@import "../defaults";   // Global defaults.
+@import '../defaults'; // Global defaults.
 
 // BioData.pt Base Global styling.
 // -----------------------------------------------------------------------------
@@ -10,7 +10,7 @@
  * Issue #3246827: Fix em.placeholder style from Bootstrap 5 base styling with the Drupal core placeholder
  * https://www.drupal.org/i/3246827
  */
- em.placeholder {
+em.placeholder {
   cursor: unset !important;
   vertical-align: unset !important;
   opacity: unset !important;
@@ -24,16 +24,16 @@
 
 // Have a style form required fieldset, HTML input elements for fields.
 .form-required {
-
   &::after {
     content: '';
     vertical-align: super;
     display: inline-block;
     background-image: url(../../images/required.svg);
     background-repeat: no-repeat;
-    background-size: calc(#{$input-height} * .16666666666) calc(#{$input-height} * .16666666666);
-    width: calc(#{$input-height} * .16666666666);
-    height: calc(#{$input-height} * .16666666666);
+    background-size: calc(#{$input-height} * 0.16666666666)
+      calc(#{$input-height} * 0.16666666666);
+    width: calc(#{$input-height} * 0.16666666666);
+    height: calc(#{$input-height} * 0.16666666666);
     margin: 0 0.3em;
   }
 }
@@ -83,24 +83,32 @@ body.user-logged-in {
   }
 }
 
+// Change Underline offset for inline links.
+a {
+  text-underline-offset: 0.25em;
+}
 
 // Custom BioData.pt styles
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Roboto Slab', sans-serif;
 }
 
 h1 {
   text-transform: uppercase;
-  color: #F37021;
+  color: #f37021;
 }
 
 h3 {
   text-transform: uppercase;
-  color: #662B14;
+  color: #662b14;
   font-size: 1.17em;
 }
-
 
 // Show feed icon
 .feed-icon {
@@ -109,7 +117,7 @@ h3 {
   width: 16px;
   height: 16px;
   text-indent: -9999px;
-  background: url("/images/square-rss.svg") no-repeat;
+  background: url('/images/square-rss.svg') no-repeat;
 }
 
 // Fix navbar over Drupal admin elements:
@@ -119,26 +127,26 @@ h3 {
 
 // Job posting formatting
 .job-posting .field__label {
-    font-weight: bold;
-    margin-top: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .field--name-schema-responsibilities .field__item::before {
-    content: "• ";
+  content: '• ';
 }
 
 .field--name-schema-skills .field__item::before {
-    content: "• ";
+  content: '• ';
 }
 
 // Logo size fix
 
 .navbar-brand img {
-    height: 55px;
+  height: 55px;
 }
 
 @media (min-width: 1200px) {
-    .navbar-brand img {
-        height: 90px;
-    }
+  .navbar-brand img {
+    height: 90px;
+  }
 }
