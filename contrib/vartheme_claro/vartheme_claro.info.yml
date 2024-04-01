@@ -1,0 +1,44 @@
+name: "Vartheme Claro"
+type: theme
+base theme: gin
+description: "A modern administration theme for Varbase standard websites. Based on the Gin Admin Theme and Claro Drupal core admin theme."
+alt text: "Screenshot of Vartheme Claro, Varbase administration theme."
+core_version_requirement: ~9.5.0 || ~10
+package: Varbase (deprecated)
+lifecycle: deprecated
+lifecycle_link: 'https://www.drupal.org/project/vartheme_claro'
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+libraries:
+  - vartheme_claro/global-admin-styling
+  # When having a custom JavaScript.
+  # - vartheme_claro/global-admin-scripts
+libraries-override:
+  social_auth/auth-icons: vartheme_claro/auth-icons
+  claro/install-page:
+    css:
+      theme:
+        css/theme/install-page.css: false
+
+libraries-extend:
+  claro/install-page:
+    - vartheme_claro/install-styling
+    - vartheme_claro/install-scripts
+
+ckeditor_stylesheets: false
+ckeditor5-stylesheets: false
+
+# Information added by Drupal.org packaging script on 2024-03-17
+version: '4.0.8'
+project: 'vartheme_claro'
+datestamp: 1710679765

@@ -199,3 +199,4 @@ bootstrap-icons:
   css:
     theme:
       fonts/bootstrap-icons/font/bootstrap-icons.min.css: { minified: true }
+

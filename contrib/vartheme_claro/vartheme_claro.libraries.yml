@@ -1,0 +1,30 @@
+# Global admin styling.
+global-admin-styling:
+  css:
+    theme:
+      css/theme/vartheme-claro.theme.style.css: { }
+
+# Global admin right to left styling.
+global-admin-styling-rtl:
+  css:
+    theme:
+      fonts/rtl/tajawal/css/tajawal.css: { }
+      css/theme/vartheme-claro.theme.style-rtl.css: { }
+
+# Custom install styling.
+install-styling:
+  css:
+    theme:
+      css/theme/install-page.css: { }
+
+# Custom install scripts.
+install-scripts:
+  js:
+    js/install-scripts.js: { }
+  dependencies:
+    - gin/gin_accent
+
+auth-icons:
+  css:
+    theme:
+      css/theme/auth-icons.theme.css: { }
