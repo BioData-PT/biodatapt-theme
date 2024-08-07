@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This theme has been deprecated in favour of [Sassy Biotheme](https://github.com/BioData-PT/sassy_biotheme).
+
 # BioData.pt Theme for Drupal
 
 [![Deploy](https://github.com/BioData-PT/biodatapt-theme/actions/workflows/ssh-deploy.yml/badge.svg)](https://github.com/BioData-PT/biodatapt-theme/actions/workflows/ssh-deploy.yml)
